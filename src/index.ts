@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 
 let input = fs.readFileSync(process.stdin.fd, 'utf-8');

@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node ./index.ts"
+    "build": "tsc",
+    "start": "ts-node ./src/index.ts"
+  },
+  "bin": {
+    "proto3-renumber": "./dist/index.js"
   },
   "keywords": [],
   "author": "",
