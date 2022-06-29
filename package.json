@@ -1,6 +1,6 @@
 {
   "name": "protobuf-renumber",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,10 +14,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^4.1.2",
+    "klaw-sync": "^6.0.0",
     "ts-node": "^10.8.1",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "yargs": "^17.5.1"
   },
   "devDependencies": {
-    "@types/node": "^18.0.0"
+    "@types/klaw-sync": "^6.0.1",
+    "@types/node": "^18.0.0",
+    "@types/yargs": "^17.0.10"
   }
 }
