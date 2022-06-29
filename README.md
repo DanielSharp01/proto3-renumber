@@ -22,6 +22,8 @@ You can also renumber all files in the current working directory by providing `-
 proto3-renumber --all
 ```
 
+For all there's also a crude `--exclude` or `-e` array option that just checks if the path contains a string. Pretty useful for `node_modules` or `.git`.
+
 ## Is the renumbering destructive?
 
 

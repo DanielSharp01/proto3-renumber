@@ -9,10 +9,14 @@ const argv = yargs(process.argv.slice(2))
   .option('input', { alias:'i', type: 'string' })
   .option('all', { alias:'a', type: 'boolean' })
   .option('output', { alias: 'o', type: 'string'})
+  .option('exclude', { alias: 'e', type: 'string', array: true })
   .parseSync();
 
+const klawFilterFuncion: klawSync.Filter = f =>
+  !argv.exclude || !argv.exclude.some(e => f.path.includes(e));
+
 if (argv.all) {
-  const files = klawSync('.', { nodir: true });
+  const files = klawSync('.', { nodir: true, filter: klawFilterFuncion });
   for (const file of files.filter(f => f.path.endsWith('.proto'))) {
     renumber(file.path);
   }
