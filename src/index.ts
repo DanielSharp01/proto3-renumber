@@ -45,5 +45,5 @@ function renumber(inputFile: string, outputFile?: string) {
   }
 
   fs.writeFileSync(outputFile ?? inputFile, input, 'utf-8')
-  console.log(chalk.greenBright(`Renumbered ${chalk.cyanBright(inputFile)}`))
+  console.log(chalk.greenBright(`📝 Renumbered ${chalk.cyanBright(inputFile)}`))
 }
