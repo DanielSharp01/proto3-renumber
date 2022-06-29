@@ -11,7 +11,13 @@ Run `npm run build` then `npm link` and you are ready to use proto3-renumber fro
 ## Usage
 
 ```
-proto_to_renumer.proto | proto3-renumber start > renumbered_proto.proto
+proto_to_renumber.proto | proto3-renumber > renumbered_proto.proto
 ```
 
 Make sure to you use `--silent` if you run decide to run from npm scripts or the npm run log will be in your output.
+
+**Warning:** If you want to rewrite the same file then due to the quirks of shells you will have to redirect to a program that writes to the file like `tee`
+
+```
+proto_to_renumber.proto | proto3-renumber | tee proto_to_renumber.proto
+```
