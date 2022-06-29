@@ -13,7 +13,7 @@ const argv = yargs(process.argv.slice(2))
 
 if (argv.all) {
   const files = klawSync('.', { nodir: true });
-  for (const file of files) {
+  for (const file of files.filter(f => f.path.endsWith('.proto'))) {
     renumber(file.path);
   }
 } else if (argv.input) {
